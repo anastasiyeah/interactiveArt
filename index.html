@@ -9,12 +9,29 @@
     <link href="style/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
+      <script type="text/javascript">
+    ImageArray = new Array();
+    ImageArray[0] = 'trumph.jpg';
+    ImageArray[1] = '1.jpg';
+    ImageArray[2] = '2.jpg';
+    ImageArray[3] = '3.jpg';
+  
+
+
+function getRandomImage() {
+    var num = Math.floor( Math.random() * 4);
+    var img = ImageArray[num];
+    document.getElementById("randImage").innerHTML = ('<img src="' + 'images/' + img + '" width="250px">')
+
+}
+</script>
 </head>
-<body>
+<body onload="getRandomImage()">
 	
     <div class="split left">
     <div class="centered">
-        <img src="trumph.jpg" alt="Art Donald Trumph">    
+       
+        <div id="randImage"></div>
     
     <div id="results">Your captured image will appear here...</div>
 	</div>
